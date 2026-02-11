@@ -20,16 +20,52 @@
 
 **Objetivo:** provar o conceito
 
-| Semana | Foco |
-| ------ | ----- |
-| **2** | `forge init` — estrutura `.forge/`, config + estado inicial, logs básicos |
-| **3** | **Engenheiro IA:** leitura de briefing, geração de plano, `forge plan`, persistência de planos |
-| **4** | Aprovação de plano — `forge approve plan`, controle de estado, validações de fluxo |
-| **5** | **Dev Bot** (fullstack provisório) — `forge dev run`, geração de código simples, organização de output |
-| **6** | **QA Bot** básico — `forge qa run`, relatório de QA, bloqueio de avanço |
-| **7** | `forge engineer review`, revisão final, ajustes, `forge status` + `forge logs` |
+### Semana 2
+
+- `forge init`
+- Estrutura `.forge/` (context, plans, tasks, qa, decisions, logs, config)
+- Config + estado inicial
+- Logs básicos
+
+### Semana 3
+
+- **Engenheiro IA:**
+  - Leitura de briefing
+  - Geração de plano (escopo, arquitetura, cronograma)
+  - Comando `forge plan`
+  - Persistência de planos
+
+### Semana 4
+
+- Aprovação de plano
+- `forge approve plan`
+- Controle de estado (state machine)
+- Validações de fluxo (pré-condições por comando)
+
+### Semana 5
+
+- **Dev Bot** (fullstack provisório)
+- `forge dev run`
+- Geração de código simples
+- Organização de output em `.forge/`
+
+### Semana 6
+
+- **QA Bot** básico
+- `forge qa run`
+- Relatório de QA em Markdown
+- Bloqueio de avanço quando reprovado
+
+### Semana 7
+
+- `forge engineer review` — revisão final e decisão de avanço/correção
+- Ajustes de integração
+- `forge status` + `forge logs`
+- Testes ponta a ponta do workflow
 
 **📦 Entrega:** Forge MVP v0.1 funcional (CLI)
+
+**📅 Semanas 2–7**
 
 ---
 
@@ -37,11 +73,21 @@
 
 **Objetivo:** deixar o Forge utilizável no dia a dia
 
-- Melhorar state machine
-- Melhorar logs e erros
-- Refinar prompts
-- Melhorar UX do terminal
+### Semana 8
+
+- Melhorar state machine (transições, pré-condições)
+- Melhorar logs (níveis, contexto, persistência)
+
+### Semana 9
+
+- Melhorar tratamento de erros e mensagens ao usuário
+- Refinar prompts do Engenheiro e do Dev Bot
+
+### Semana 10
+
+- Melhorar UX do terminal (Rich: tabelas, status, feedback)
 - Testes manuais com projetos reais
+- Ajustes a partir do uso
 
 **📅 Semanas 8–10**
 
@@ -51,12 +97,27 @@
 
 **Objetivo:** sair do dev genérico
 
-- Separar Dev Bot em:
-  - **Frontend Bot**
-  - **Backend Bot**
-- Ajuste do Engenheiro IA
+### Semana 11
+
+- Separar Dev Bot em **Frontend Bot** (módulo e responsabilidades)
+- Ajuste do Engenheiro IA para distribuir tarefas frontend
+
+### Semana 12
+
+- **Backend Bot** (módulo e responsabilidades)
+- Engenheiro IA passa a distribuir tarefas frontend e backend
+
+### Semana 13
+
 - Novos comandos: `forge frontend run`, `forge backend run`
-- QA adaptado por camada
+- Persistência em `.forge/frontend/` e `.forge/backend/`
+- Integração no workflow
+
+### Semana 14
+
+- QA adaptado por camada (validação frontend vs backend)
+- Relatórios e critérios por tipo de entrega
+- Revisão e estabilização da Fase 3
 
 **📅 Semanas 11–14**
 
@@ -66,11 +127,23 @@
 
 **Objetivo:** engenharia completa
 
-- DevOps Bot dedicado
-- Git workflow completo
-- Validação de ambientes
+### Semana 15
+
+- **DevOps Bot** dedicado (módulo, responsabilidades)
+- Comando `forge devops run`
+- Integração no planejamento do Engenheiro
+
+### Semana 16
+
+- Git workflow completo (init, branches, estratégia)
+- Validação de ambientes (local, preparação para deploy)
 - Preparação de deploy (sem automação total)
-- QA mais rigoroso
+
+### Semana 17
+
+- QA mais rigoroso (DevOps + código)
+- Documentação interna do fluxo DevOps
+- Estabilização da Fase 4
 
 **📅 Semanas 15–17**
 
@@ -80,11 +153,26 @@
 
 **Objetivo:** Forge completo
 
-- Design Bot (opcional)
-- Prompts maduros
-- Documentação oficial
-- Templates de projeto
+### Semana 18
+
+- **Design Bot** (opcional): módulo, wireframes/UI, integração com workflow
+- Comando `forge design run` (se mantido no escopo)
+
+### Semana 19
+
+- Prompts maduros (todos os bots)
+- Ajustes de qualidade e consistência das saídas
+
+### Semana 20
+
+- Documentação oficial (README, uso, comandos, exemplos)
+- Templates de projeto (estrutura base recomendada)
+
+### Semana 21
+
 - Estabilização geral
+- Testes finais e polish
+- Entrega v1.0
 
 **📅 Semanas 18–21**
 
@@ -94,8 +182,8 @@
 
 | Marco | Duração |
 | ----- | ------- |
-| MVP funcional | ~7 semanas |
-| Produto robusto | ~14 semanas |
+| MVP funcional (v0.1) | ~7 semanas |
+| Produto robusto (até v0.8) | ~17 semanas |
 | Produto final (v1.0) | ~21 semanas (~5 meses) |
 
 ---
