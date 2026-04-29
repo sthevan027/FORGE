@@ -98,6 +98,29 @@ Requisito: **Python 3.11+**.
 
 ---
 
+## Desenvolvimento local
+
+```bash
+# Na raiz do repositório
+python -m venv .venv
+
+# Windows (PowerShell)
+./.venv/Scripts/Activate.ps1
+
+pip install -U pip
+pip install -e .
+
+# Ver comandos disponíveis
+forge --help
+
+# Inicializar a estrutura .forge/ em um diretório
+forge init --path .
+forge status --path .
+forge logs --path .
+```
+
+---
+
 ## Licença
 
 Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para detalhes.

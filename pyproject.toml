@@ -1,0 +1,27 @@
+[project]
+name = "forge-cli"
+version = "0.1.0"
+description = "Forge: CLI-first tool that orchestrates AI engineering workflows."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Sthevan Santos" }]
+dependencies = [
+  "typer>=0.12.0",
+  "rich>=13.7.0",
+  "inquirerpy>=0.3.4",
+]
+
+[project.scripts]
+forge = "forge.cli.main:run"
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "forge" }
+
+[tool.setuptools.packages.find]
+where = ["forge"]
+
