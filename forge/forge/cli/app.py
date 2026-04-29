@@ -12,7 +12,7 @@ app = typer.Typer(
     no_args_is_help=True,
 )
 
-app.add_typer(init_cmd.app, name="init")
-app.add_typer(status_cmd.app, name="status")
-app.add_typer(logs_cmd.app, name="logs")
+app.command(name="init")(init_cmd.run)
+app.command(name="status")(status_cmd.show)
+app.command(name="logs")(logs_cmd.show)
 
