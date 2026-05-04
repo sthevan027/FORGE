@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import typer
 
+from forge.core.config import ensure_default_config_file, ensure_sample_briefing
 from forge.core.forge_dir import ForgeDir
 from forge.core.logging import get_logger, setup_logging
 from forge.state.machine import ForgeStateMachine
@@ -19,6 +20,8 @@ def run(
 
     forge_dir = ForgeDir.from_project_path(path)
     forge_dir.ensure_structure()
+    ensure_default_config_file(forge_dir, force=False)
+    ensure_sample_briefing(forge_dir)
     state_machine = ForgeStateMachine(forge_dir)
     state_machine.init(force=force)
 

@@ -32,3 +32,21 @@ class ForgeDir:
     def log_file(self) -> Path:
         return self.path / "logs" / "forge.log"
 
+    def config_file(self) -> Path:
+        return self.path / "config" / "forge.toml"
+
+    def briefing_file(self) -> Path:
+        return self.path / "context" / "briefing.md"
+
+    def plan_file(self) -> Path:
+        return self.path / "plans" / "plan.md"
+
+    def dev_output_file(self) -> Path:
+        return self.path / "tasks" / "dev_output.md"
+
+    def qa_report_file(self) -> Path:
+        return self.path / "qa" / "report.md"
+
+    def engineer_decision_file(self) -> Path:
+        return self.path / "decisions" / "engineer_review.md"
+
