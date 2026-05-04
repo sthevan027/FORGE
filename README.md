@@ -108,7 +108,7 @@ python -m venv .venv
 ./.venv/Scripts/Activate.ps1
 
 pip install -U pip
-pip install -e .
+pip install -e ".[dev]"
 
 # Ver comandos disponíveis
 forge --help
@@ -118,6 +118,12 @@ forge init --path .
 forge status --path .
 forge logs --path .
 ```
+
+### Configuração de IA (MVP)
+
+Após `forge init`, edite `.forge/config/forge.toml` (provider `openai`, `claude` ou `ollama`) ou use `OPENAI_API_KEY` / `ANTHROPIC_API_KEY`. Para testes sem API real: `FORGE_DRY_RUN=1`.
+
+Testes: `python -m pytest`.
 
 ---
 
